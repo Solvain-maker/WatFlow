@@ -15,7 +15,7 @@ luminance = (299 * rgb[:, :, 0] + 587 * rgb[:, :, 1] + 114 * rgb[:, :, 2]) // 10
 x = np.arange(width)[None, :]
 wat_band = (x >= round(width * 0.34)) & (x < round(width * 0.64))
 wat_letters = wat_band & (saturation < 105) & (luminance > 35) & (rgba[:, :, 3] > 0)
-rgba[wat_letters, :3] = (7, 28, 43)
+rgba[wat_letters, :3] = (0, 0, 0)
 
 result = Image.fromarray(rgba, "RGBA")
 bounds = result.getchannel("A").getbbox()
@@ -28,3 +28,4 @@ canvas.alpha_composite(result, (padding, padding))
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 canvas.save(OUTPUT, optimize=True)
 print(f"Exported {OUTPUT}: {canvas.width}x{canvas.height} from {SOURCE}")
+

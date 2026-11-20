@@ -210,3 +210,65 @@ button:disabled { opacity: .5; cursor: not-allowed; box-shadow: none; transform:
 
 .brand-logo { width:190px; height:58px; object-fit:contain; }
 .sidebar-logo { display:block; width:208px; height:74px; object-fit:contain; flex:none; }
+
+
+/* Recent activity rows: keep Arabic actions and timestamps on separate lines. */
+.activity-list { display: grid; gap: 8px; margin-top: 14px; }
+.activity { display: flex; align-items: center; gap: 13px; min-height: 60px; padding: 10px 13px; border: 1px solid #eaf0ee; border-radius: 12px; background: #fff; text-align: right; }
+.activity-copy { display: flex; min-width: 0; flex: 1; flex-direction: column; align-items: flex-start; gap: 3px; }
+.activity-copy strong { display: block; color: #244a45; font-size: 13px; font-weight: 650; line-height: 1.55; }
+.activity-copy small { display: block; color: #879692; font-size: 11px; font-weight: 400; line-height: 1.45; }
+.activity-dot { width: 10px; height: 10px; flex: 0 0 10px; border-radius: 50%; }
+.activity-dot.blue { background: #159ee3; box-shadow: 0 0 0 4px #e8f6fc; }
+.activity-dot.orange { background: #f59e0b; box-shadow: 0 0 0 4px #fff5e5; }
+.activity-dot.green { background: #10b981; box-shadow: 0 0 0 4px #e8f8f1; }
+
+
+/* Simulation page: align Arabic cards, steps, and mixed-script measurements. */
+.simulation-status { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:12px; padding:13px 16px; border:1px solid #e5eeeb; border-radius:14px; background:#fff; }
+.simulation-state { display:flex; align-items:center; gap:11px; }
+.simulation-state > div { display:flex; flex-direction:column; gap:3px; }
+.simulation-state small { color:#879692; font-size:11px; }
+.simulation-state strong { color:#244a45; font-size:13px; }
+.simulation-controls { display:flex; align-items:center; gap:8px; }
+.scenario-grid { align-items:stretch; margin-bottom:14px; }
+.scenario { display:grid; grid-template-columns:auto minmax(0,1fr); grid-template-rows:auto 1fr; align-items:start; gap:12px; min-height:142px; padding:16px; text-align:right; }
+.scenario-icon { grid-column:1; grid-row:1; width:40px; height:40px; display:grid; place-items:center; border-radius:11px; }
+.scenario-icon.blue { background:#e8f6fc; color:#159ee3; }
+.scenario-icon.orange { background:#fff4df; color:#e99a08; }
+.scenario-icon.green { background:#e9f8f1; color:#10a879; }
+.scenario > div:nth-child(2) { grid-column:2; grid-row:1; min-width:0; }
+.scenario h3 { margin:1px 0 5px; color:#173d39; font-size:15px; }
+.scenario p { margin:0; color:#71817e; font-size:12px; line-height:1.7; }
+.scenario > span { grid-column:1 / -1; grid-row:2; justify-self:start; align-self:end; margin:0; padding-top:9px; border-top:1px solid #edf2f0; color:#078675; font-size:12px; font-weight:700; }
+.simulation-workspace { align-items:stretch; }
+.simulation-result-panel, .simulation-process-panel { min-width:0; }
+.simulation-result-panel { min-height:330px; }
+.leak-result { display:flex; flex-direction:column; gap:18px; }
+.result-metrics { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.result-metric { display:flex; min-width:0; min-height:88px; flex-direction:column; justify-content:center; gap:9px; padding:13px; border:1px solid #eaf0ee; border-radius:12px; background:#fbfdfc; text-align:right; }
+.result-metric > span { color:#7b8c87; font-size:11px; }
+.result-metric > strong { display:flex; align-items:baseline; gap:5px; color:#173d39; font-size:19px; font-weight:750; line-height:1.35; unicode-bidi:isolate; }
+.result-metric > strong small { color:#617671; font-size:11px; font-weight:600; }
+.proposed-action { display:flex; align-items:flex-start; gap:11px; padding:13px; border:1px solid #dcefe8; border-radius:12px; background:#f3faf7; }
+.proposed-icon { display:grid; width:34px; height:34px; flex:0 0 34px; place-items:center; border-radius:10px; background:#e2f4ed; color:#13856e; }
+.proposed-icon svg { width:18px; height:18px; }
+.proposed-action > div:last-child { min-width:0; }
+.proposed-action strong { color:#244a45; font-size:13px; }
+.proposed-action p { margin:4px 0 0; color:#647b75; font-size:12px; line-height:1.7; }
+.action-button { align-self:flex-start; min-height:42px; padding-inline:16px; }
+.simulation-process-panel { display:flex; flex-direction:column; gap:14px; }
+.simulation-flow { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); align-items:stretch; gap:7px; }
+.simulation-flow .flow-step { display:flex; min-width:0; min-height:76px; flex-direction:column; align-items:center; justify-content:center; gap:7px; padding:8px 4px; border:1px solid #eaf0ee; border-radius:11px; background:#fbfdfc; text-align:center; }
+.simulation-flow .flow-step svg { width:20px; height:20px; flex:none; color:#176d65; }
+.simulation-flow .flow-step span { color:#536d67; font-size:10px; line-height:1.45; white-space:normal; }
+.simulation-linked { display:grid; gap:8px; margin-top:auto; }
+.linked-reading { display:flex; align-items:center; gap:9px; min-height:39px; padding:8px 10px; border-radius:9px; background:#f7faf9; color:#526c66; font-size:11px; }
+.linked-reading > span:nth-child(2) { flex:1; }
+.linked-reading strong { color:#244a45; font-size:12px; font-weight:700; unicode-bidi:isolate; }
+.linked-reading .blue-dot, .linked-reading .orange-dot, .linked-reading .green-dot { width:8px; height:8px; flex:0 0 8px; border-radius:50%; }
+.normal-result { display:flex; min-height:250px; flex-direction:column; align-items:center; justify-content:center; gap:9px; text-align:center; }
+.normal-result h3 { margin:5px 0 0; color:#176d56; font-size:18px; }
+.normal-result p { margin:0; color:#758680; font-size:13px; }
+@media (max-width: 900px) { .result-metrics { grid-template-columns:1fr; } .result-metric { min-height:72px; } }
+@media (max-width: 760px) { .scenario { min-height:125px; } .simulation-flow { grid-template-columns:repeat(3,minmax(0,1fr)); } .simulation-status { align-items:stretch; } .simulation-controls { width:100%; } .simulation-controls button { flex:1; } .simulation-result-panel { min-height:0; } }
