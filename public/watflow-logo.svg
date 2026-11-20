@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 150" role="img" aria-labelledby="title" preserveAspectRatio="xMidYMid meet">
+<title id="title">WatFlow</title>
+<defs><linearGradient id="flow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#20d6bd"/><stop offset="1" stop-color="#0785e9"/></linearGradient></defs>
+<path d="M94 20C78 44 51 73 51 99a43 43 0 0 0 86 0c0-26-27-55-43-79Z" fill="none" stroke="url(#flow)" stroke-width="9" stroke-linejoin="round"/>
+<path d="M55 95c12 0 12-13 24-13s12 25 24 25 12-22 24-22 13 10 25 10" fill="none" stroke="url(#flow)" stroke-width="9" stroke-linecap="round"/>
+<text x="184" y="98" font-family="Arial,sans-serif" font-size="58" font-weight="700" letter-spacing="-1.5" fill="#102f42">Wat<tspan fill="url(#flow)">Flow</tspan></text>
+</svg>
+
